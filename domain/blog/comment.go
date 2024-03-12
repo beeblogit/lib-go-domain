@@ -1,5 +1,11 @@
 package blog
 
+import (
+ "time"
+ "gorm.io/gorm"
+ "github.com/google/uuid"
+)
+
 type Comment struct {
 	ID        string         `json:"id" gorm:"type:char(36);not null;primary_key;unique_index"`
 	UserID    string         `json:"user_id" gorm:"type:char(36)"`
