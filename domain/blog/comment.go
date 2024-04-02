@@ -13,8 +13,8 @@ type Comment struct {
 	Name      string         `json:"name" gorm:"type:char(50);not null"`
 	Comment   string         `json:"comment" gorm:"type:text"`
 	Likes     uint32         `json:"likes"`
-	CreatedAt *time.Time     `json:"-"`
-	UpdatedAt *time.Time     `json:"-"`
+	CreatedAt *time.Time     `json:"created_at"`
+	UpdatedAt *time.Time     `json:"updated_at"`
 	Deleted   gorm.DeletedAt `json:"-"`
 }
 
